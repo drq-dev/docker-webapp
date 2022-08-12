@@ -4,6 +4,7 @@
   "description": "An API that returns jokes.",
   "main": "app.js",
   "scripts": {
+    "start": "nodemon --exec babel-node src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,13 @@
   "bugs": {
     "url": "https://github.com/drq-dev/docker-webapp/issues"
   },
-  "homepage": "https://github.com/drq-dev/docker-webapp#readme"
+  "homepage": "https://github.com/drq-dev/docker-webapp#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.10",
+    "@babel/node": "^7.18.10",
+    "nodemon": "^2.0.19"
+  }
 }
