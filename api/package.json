@@ -2,7 +2,7 @@
   "name": "docker-webapp-api",
   "version": "1.0.0",
   "description": "An API that returns jokes.",
-  "main": "app.js",
+  "main": "src/app.js",
   "scripts": {
     "start": "nodemon --exec babel-node src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,11 +18,14 @@
   },
   "homepage": "https://github.com/drq-dev/docker-webapp#readme",
   "dependencies": {
+    "axios": "^0.27.2",
+    "cors": "^2.8.5",
     "express": "^4.18.1"
   },
   "devDependencies": {
     "@babel/core": "^7.18.10",
     "@babel/node": "^7.18.10",
     "nodemon": "^2.0.19"
-  }
+  },
+  "type": "module"
 }

@@ -1,11 +1,16 @@
-const updateJoke = async () => {
-  const response = await fetch("http://localhost:3000");
-  if (!response.ok) return "Witze können nicht geladen werden.";
-
-  const { joke } = await response.json();
-
+const displayJoke = (joke) => {
   const jokeParagraph = document.querySelector("#joke");
   jokeParagraph.innerHTML = joke;
+};
+
+const updateJoke = async () => {
+  try {
+    const response = await fetch("http://localhost:3000");
+    const { joke } = await response.json();
+    displayJoke(joke);
+  } catch (error) {
+    displayJoke("Witze können nicht geladen werden.");
+  }
 };
 
 const button = document.querySelector("button");

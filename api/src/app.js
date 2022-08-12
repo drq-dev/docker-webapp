@@ -1,3 +1,5 @@
+"use strict";
+
 import express, { response } from "express";
 
 import axios from "axios";
